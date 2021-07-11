@@ -22,7 +22,7 @@ namespace YOUTUBE.API.Controllers
             return Ok(data);
         }
 
-        [HttpPost]
+        [HttpGet("/getById")]
         public async Task<IActionResult> GetDetail(string videoId)
         {
             var detail = await _youtubeService.GetVideo(videoId).ConfigureAwait(false);
